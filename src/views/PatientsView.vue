@@ -113,7 +113,6 @@ const patients = ref([
 
 
 
-// Simulate logged-in user from session (replace with real auth later)
 const doctorName = ref(localStorage.getItem('username') || 'Unknown')
 
 window.addEventListener('storage', () => {

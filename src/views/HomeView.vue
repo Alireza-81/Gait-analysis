@@ -57,7 +57,6 @@ const patients = ref([
   { id: 2, name: 'Mary Jane' }
 ])
 
-// Simulate logged-in user from session (replace with real auth later)
 const doctorName = ref(localStorage.getItem('username') || 'Unknown')
 
 window.addEventListener('storage', () => {
@@ -65,7 +64,6 @@ window.addEventListener('storage', () => {
 })
 
 
-// Title updates based on route
 const route = useRoute()
 const routeTitles = {
   '/dashboard': 'Dashboard',

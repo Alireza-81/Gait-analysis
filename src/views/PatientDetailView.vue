@@ -96,7 +96,6 @@ const patients = [
     images: [],
     video: '/videos/mary_jane_walk.mp4'
   }
-  // You can define more mock patients here...
 ]
 
 const patient = computed(() => patients.find(p => p.id === patientId))
@@ -104,10 +103,9 @@ const editable = reactive({ ...patient.value })
 
 function save() {
   alert('Changes saved! (Just mock for now)')
-  // In a real app, you'd call an API to persist changes
+
 }
 
-// Simulate logged-in user from session (replace with real auth later)
 const doctorName = ref(localStorage.getItem('username') || 'Unknown')
 
 window.addEventListener('storage', () => {
@@ -135,7 +133,7 @@ function addPatient() {
 <style scoped>
 .patient-detail-layout {
   display: flex;
-  height: calc(100vh - 40px); /* Account for top/bottom padding */
+  height: calc(100vh - 40px);
   gap: 100px;
   padding: 20px;
 }
